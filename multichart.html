@@ -63,8 +63,7 @@ $(document).ready(function()
 {
  //Add Channel Load Menu
  var menu=document.getElementById("Channel Select");
- for (var channelIndex=0; channelIndex<channelKeys.length; channelIndex++)  // iterate through each channel
- {
+ for (var channelIndex=0; channelIndex<channelKeys.length; channelIndex++) { // iterate through each channel
    window.console && console.log('Name',channelKeys[channelIndex].name);
    var menuOption =new Option(channelKeys[channelIndex].name,channelIndex);
    menu.options.add(menuOption,channelIndex);
@@ -253,7 +252,7 @@ $(document).ready(function()
 		},
     tooltip: {
       valueDecimals: 1,
-      valueSuffix: '°F',
+      valueSuffix: '°C',
       xDateFormat:'%Y-%m-%d<br/>%1:%M:%S %p'
 			// reformat the tooltips so that local times are displayed
 			//formatter: function() {
