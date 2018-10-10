@@ -253,7 +253,7 @@ $(document).ready(function()
     tooltip: {
       valueDecimals: 1,
       valueSuffix: '°C',
-      xDateFormat:'%Y-%m-%d<br/>%1:%M:%S %p'
+      xDateFormat:'%Y-%m-%d<br/>%H:%M:%S'
 			// reformat the tooltips so that local times are displayed
 			//formatter: function() {
       //var d = new Date(this.x + (myOffset*60000));
@@ -288,7 +288,7 @@ $(document).ready(function()
 		exporting: {
 		  enabled: true,
       csv: {
-        dateFormat: '%d/%m/%Y %I:%M:%S %p'
+        dateFormat: '%d/%m/%Y %H:%M:%S'
         }
 		},
 		legend: {
