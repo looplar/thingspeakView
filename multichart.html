@@ -31,8 +31,12 @@ channelKeys.push({channelNumber:584302, name:'no4',key:'IJ0G0ZL26V7JKR99',
                   fieldList:[{field:1,axis:'T'},{field:2,axis:'O'}]});
 channelKeys.push({channelNumber:584312, name:'no5',key:'AFRDERXRA62C747V',
                   fieldList:[{field:1,axis:'T'},{field:2,axis:'O'}]});
-//channelKeys.push({channelNumber:584313, name:'no6',key:'CY53H0DCTP1Q09E0',
-//                  fieldList:[{field:1,axis:'T'},{field:2,axis:'O'}]});
+channelKeys.push({channelNumber:584313, name:'no6',key:'CY53H0DCTP1Q09E0',
+                  fieldList:[{field:1,axis:'T'},{field:2,axis:'O'}]});
+channelKeys.push({channelNumber:606724, name:'no7',key:'WF7OWH6QAM6JBVD3',
+                  fieldList:[{field:1,axis:'T'},{field:2,axis:'O'}]});
+channelKeys.push({channelNumber:606726, name:'no8',key:'0DX01GC893HPEKQA',
+                  fieldList:[{field:1,axis:'T'},{field:2,axis:'O'}]});
 
 // user's timezone offset
 var myOffset = new Date().getTimezoneOffset();
@@ -58,7 +62,7 @@ function HideAll(){
 
 }
 
-      //  This is where the chart is generated.
+//  This is where the chart is generated.
 $(document).ready(function()
 {
  //Add Channel Load Menu
@@ -82,11 +86,9 @@ $(document).ready(function()
   }
  //make calls to load data from each channel into channelKeys array now
  // draw the chart when all the data arrives, later asyncronously add history
- for (var channelIndex=0; channelIndex<channelKeys.length; channelIndex++)  // iterate through each channel
-  {
+ for (var channelIndex=0; channelIndex<channelKeys.length; channelIndex++) { // iterate through each channel
     channelKeys[channelIndex].loaded = false;
     loadThingSpeakChannel(channelIndex,channelKeys[channelIndex].channelNumber,channelKeys[channelIndex].key,channelKeys[channelIndex].fieldList);
-
   }
  //window.console && console.log('Channel Keys',channelKeys);
 
@@ -140,8 +142,6 @@ $(document).ready(function()
       {
         load: function()
         {
-				  if ('true' === 'true' && (''.length < 1 && ''.length < 1 && ''.length < 1 && ''.length < 1 && ''.length < 1))
-          {
             // If the update checkbox is checked, get latest data every 15 seconds and add it to the chart
 						setInterval(function()
             {
@@ -193,7 +193,6 @@ $(document).ready(function()
 						}, 15000);
 					}
 				}
-			}
 		},
 		rangeSelector: {
 			buttons: [{
